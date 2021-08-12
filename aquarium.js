@@ -3,7 +3,9 @@ Access the form element using the method getElementById()
 The following URL will help you to do this:
 https://www.javascript-coder.com/javascript-form/getelementbyid-form/
 */
-
+var l = document.getElementById().innerHTML = "   ";
+var h = document.getElementById().innerHTML = "   ";
+var w = document.getElementById().innerHTML = "   ";
 
 
 /*
