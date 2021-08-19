@@ -3,10 +3,10 @@ Access the form element using the method getElementById()
 The following URL will help you to do this:
 https://www.javascript-coder.com/javascript-form/getelementbyid-form/
 */
-var l = document.getElementById().innerHTML = "   ";
-var h = document.getElementById().innerHTML = "   ";
-var w = document.getElementById().innerHTML = "   ";
 
+var l = document.getElementById().innerHTML = "length";
+var w = document.getElementById().innerHTML = "width";
+var h = document.getElementById().innerHTML = "height";
 
 /*
 Also store the tdCost id element as a variable.
@@ -14,7 +14,7 @@ The following link will help you to do this:
 https://www.w3schools.com/jsref/met_document_getelementbyid.asp
 */
 
-
+var price = document.getElementById(). innerHTML = "tdCost"; 
 
 
 /*
@@ -27,6 +27,8 @@ The links below will help you to do this:
 https://www.w3schools.com/js/js_htmldom_document.asp
 https://www.w3schools.com/jsref/event_onclick.asp
 */
+<button onclick="myFunction()">Calculate cost</button>
+<button onclick="myFunction()">Reset</button>
 
 
 
