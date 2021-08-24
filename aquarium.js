@@ -27,9 +27,9 @@ The links below will help you to do this:
 https://www.w3schools.com/js/js_htmldom_document.asp
 https://www.w3schools.com/jsref/event_onclick.asp
 */
-<button onclick="myFunction()">Calculate cost</button>
-<button onclick="myFunction()">Reset</button>
 
+document.getElementById("btnCalcCost").onclick = calculate_cost();
+document.getElementById("btnReset").onclick = reset_cost();
 
 
 /*
@@ -47,6 +47,11 @@ https://www.w3schools.com/js/js_functions.asp
 https://www.w3schools.com/jsref/jsref_isNaN.asp
 */
 
+
+if (isNaN(l)) {
+    alert("Invalid entry. Please enter a number!")
+} else {
+	(2*(h*l))+(2*(w*l))+(2*(w*h));
 
 
 /*
