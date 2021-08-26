@@ -4,9 +4,9 @@ The following URL will help you to do this:
 https://www.javascript-coder.com/javascript-form/getelementbyid-form/
 */
 
-var l = document.getElementById().innerHTML = "length";
-var w = document.getElementById().innerHTML = "width";
-var h = document.getElementById().innerHTML = "height";
+var l = document.getElementById(txtlength);
+var w = document.getElementById(txtwidth);
+var h = document.getElementById(txtheight);
 
 /*
 Also store the tdCost id element as a variable.
@@ -14,7 +14,7 @@ The following link will help you to do this:
 https://www.w3schools.com/jsref/met_document_getelementbyid.asp
 */
 
-var price = document.getElementById(). innerHTML = "tdCost"; 
+var price = document.getElementById(txttdCost);
 
 
 /*
