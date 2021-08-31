@@ -47,11 +47,15 @@ https://www.w3schools.com/js/js_functions.asp
 https://www.w3schools.com/jsref/jsref_isNaN.asp
 */
 
-
-if (isNaN(l)) {
+function TotalSurfaceArea () {
+	var length = l.value;
+	var width = w.value;
+	var height = h.value;
+if (isNaN(l) || isNaN(w) || isNaN(h)) {
     alert("Invalid entry. Please enter a number!")
 } else {
 	(2*(h*l))+(2*(w*l))+(2*(w*h));
+}
 
 
 /*
@@ -64,7 +68,12 @@ At the beginning of your function get the value of each variable you
 created at the beginning of your program and store each value as a new variable.
 https://www.javascript-coder.com/javascript-form/getelementbyid-form/
 */
-
+function LengthofEdges() {
+	var length = l.value;
+	var width = w.value;
+	var height = h.value;
+	return ((4*h)+(2*l)+(2*w));
+}	
 
 
 /*
@@ -80,6 +89,8 @@ Use the .toFixed() method to round the result to two decimal places.
 You can use the URL below to help you do this:
 https://www.w3schools.com/jsref/jsref_tofixed.asp
 */
+ var = TotalSurfaceArea();
+ var = LengthofEdges();
 
 
 
