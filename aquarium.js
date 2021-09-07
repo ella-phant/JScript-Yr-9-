@@ -4,9 +4,9 @@ The following URL will help you to do this:
 https://www.javascript-coder.com/javascript-form/getelementbyid-form/
 */
 
-var l = document.getElementById(txtlength);
-var w = document.getElementById(txtwidth);
-var h = document.getElementById(txtheight);
+var l = document.getElementById('txtLength');
+var w = document.getElementById('txtWidth');
+var h = document.getElementById('txtHeight');
 
 /*
 Also store the tdCost id element as a variable.
@@ -14,7 +14,7 @@ The following link will help you to do this:
 https://www.w3schools.com/jsref/met_document_getelementbyid.asp
 */
 
-var price = document.getElementById(txttdCost);
+var price = document.getElementById('tdCost'); 
 
 
 /*
@@ -28,9 +28,8 @@ https://www.w3schools.com/js/js_htmldom_document.asp
 https://www.w3schools.com/jsref/event_onclick.asp
 */
 
-document.getElementById("btnCalcCost").onclick = calculate_cost();
-document.getElementById("btnReset").onclick = reset_cost();
-
+document.getElementById("btnCalcCost").onclick = TotalSurfaceArea;
+document.getElementById("btnReset").onclick = reset_cost;
 
 /*
 Create a function that calculates the surface area.
@@ -46,18 +45,17 @@ and return the result. You can use the following links to help you with this.
 https://www.w3schools.com/js/js_functions.asp
 https://www.w3schools.com/jsref/jsref_isNaN.asp
 */
-
-function TotalSurfaceArea () {
+function TotalSurfaceArea() {
 	var length = l.value;
 	var width = w.value;
 	var height = h.value;
-if (isNaN(l) || isNaN(w) || isNaN(h)) {
-    alert("Invalid entry. Please enter a number!")
-} else {
-	(2*(h*l))+(2*(w*l))+(2*(w*h));
+	if (isNaN(l) || isNaN(w) || isNaN(h)) {
+		alert("Invalid entry. Please enter a number!")
+	} else {
+		return ((2*(h*l))+(2*(w*l))+(2*(w*h)));
 }
 
-
+var TotalSurfaceArea = TotalSurfaceArea();
 /*
 Create a function that calculates the length of the edges
 and returns the result.
@@ -68,6 +66,7 @@ At the beginning of your function get the value of each variable you
 created at the beginning of your program and store each value as a new variable.
 https://www.javascript-coder.com/javascript-form/getelementbyid-form/
 */
+
 function LengthofEdges() {
 	var length = l.value;
 	var width = w.value;
@@ -75,6 +74,7 @@ function LengthofEdges() {
 	return ((4*h)+(2*l)+(2*w));
 }	
 
+var LengthofEdges = LengthofEdges();
 
 /*
 create a function that stores the results of the previous functions
@@ -89,10 +89,25 @@ Use the .toFixed() method to round the result to two decimal places.
 You can use the URL below to help you do this:
 https://www.w3schools.com/jsref/jsref_tofixed.asp
 */
- var = TotalSurfaceArea();
- var = LengthofEdges();
+ 
+ 
+ function CalculateCost() {
+	 var glue_cost = 10;
+	 var labour_cost = 60;
+	 var glass;
+	 if (h < 26) {
+		glass = 6;
+	 } else {
+	 glass = 10;
+	 } 
+	 var glue = glue_cost * edges;
+	 return (l,w,h);
+ } 
+ 
+ var labour_cost = 60/6000; 
 
-
+ 
+/* cost of glue = 10c for every cm of the LengthofEdges, 
 
 /*
 Create a function named resetInputs to reset the inputs (Length, Width, Height).
@@ -101,10 +116,9 @@ Use this link to help https://www.w3schools.com/js/tryit.asp?filename=tryjs_form
 Also reset the output (tdCost). Use this link to help you do this
 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_innerhtml_delete
 */
-function myFunction() {
-  document.getElementById("inputs").reset();
+function reset_cost() {
+	l.value = "";
+	w.value = "";
+	h.value = "";
+	tdCost = "";
 }
-
-function myFunction() {
-  document.getElementById("tdCost").innerHTML = "";
-} 
