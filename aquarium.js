@@ -100,8 +100,7 @@ https://www.w3schools.com/jsref/jsref_tofixed.asp
 	 glass = 0.10;
 	 } 
 	 var glue = glue_cost * edges;
-	 
-	 
+	 var GST = 0.1; 
  } 
 
  
