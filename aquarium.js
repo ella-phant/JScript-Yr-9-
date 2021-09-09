@@ -28,7 +28,7 @@ https://www.w3schools.com/js/js_htmldom_document.asp
 https://www.w3schools.com/jsref/event_onclick.asp
 */
 
-document.getElementById("btnCalcCost").onclick = TotalSurfaceArea;
+document.getElementById("btnCalcCost").onclick = CalculateCost;
 document.getElementById("btnReset").onclick = reset_cost;
 
 /*
@@ -45,17 +45,15 @@ and return the result. You can use the following links to help you with this.
 https://www.w3schools.com/js/js_functions.asp
 https://www.w3schools.com/jsref/jsref_isNaN.asp
 */
-function TotalSurfaceArea() {
+function TotalSurfaceArea () {
 	var length = l.value;
 	var width = w.value;
 	var height = h.value;
-	if (isNaN(l) || isNaN(w) || isNaN(h)) {
+	if (isNaN(length) || isNaN(width) || isNaN(height)) {
 		alert("Invalid entry. Please enter a number!")
 	} else {
-		return ((2*(h*l))+(2*(w*l))+(2*(w*h)));
+		return (2*(height*length))+(2*(width*length))+(2*(width*height));
 }
-
-var TotalSurfaceArea = TotalSurfaceArea();
 /*
 Create a function that calculates the length of the edges
 and returns the result.
@@ -71,8 +69,9 @@ function LengthofEdges() {
 	var length = l.value;
 	var width = w.value;
 	var height = h.value;
-	return ((4*h)+(2*l)+(2*w));
+	return ((4*height)+(2*length)+(2*width));
 }	
+
 
 var LengthofEdges = LengthofEdges();
 
@@ -92,19 +91,18 @@ https://www.w3schools.com/jsref/jsref_tofixed.asp
  
  
  function CalculateCost() {
-	 var glue_cost = 10;
-	 var labour_cost = 60;
+	 var glue_cost = 0.10;
+	 var labour_cost = 60/6000;
 	 var glass;
 	 if (h < 26) {
-		glass = 6;
+		glass = 0.6;
 	 } else {
-	 glass = 10;
+	 glass = 0.10;
 	 } 
 	 var glue = glue_cost * edges;
-	 return (l,w,h);
+	 
+	 
  } 
- 
- var labour_cost = 60/6000; 
 
  
 /* cost of glue = 10c for every cm of the LengthofEdges, 
