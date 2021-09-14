@@ -49,7 +49,7 @@ function TotalSurfaceArea () {
 	var length = l.value;
 	var width = w.value;
 	var height = h.value;
-if (isNaN(l) || isNaN(w) || isNaN(h)) {
+if (isNaN(length) || isNaN(width) || isNaN(height)) {
     alert("Invalid entry. Please enter a number!")
 } else {
 	return (2*(height*length))+(2*(width*length))+(2*(width*height));
