@@ -88,7 +88,7 @@ You can use the URL below to help you do this:
 https://www.w3schools.com/jsref/jsref_tofixed.asp
 */
  
- function PreviousFunctions () {
+function PreviousFunctions () {
 	var length = l.value;
 	var width = w.value;
 	var height = h.value;
@@ -105,11 +105,14 @@ https://www.w3schools.com/jsref/jsref_tofixed.asp
 	 else {
 		 glass_cost = 0.10;
 	 }
+	 var surface_area = TotalSurfaceArea;
+	 var edges = LengthofEdges; 
 	 var glue = glue_cost*edges;
 	 var glass = surface_area*glue_cost;
  }
  var calculate_gst = glue + glass + labour_cost*gst;
  var total = labour_cost + glue + glass + calculate_gst;
+	     
 	     
  
 /* cost of glue = 10c for every cm of the LengthofEdges, 
