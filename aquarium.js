@@ -52,7 +52,7 @@ function TotalSurfaceArea () {
 if (isNaN(l) || isNaN(w) || isNaN(h)) {
     alert("Invalid entry. Please enter a number!")
 } else {
-	return (2*(h*l))+(2*(w*l))+(2*(w*h));
+	return (2*(height*length))+(2*(width*length))+(2*(width*height));
 }
 }
 /*
