@@ -109,10 +109,11 @@ function PreviousFunctions () {
 	 var edges = LengthofEdges; 
 	 var glue = glue_cost*edges;
 	 var glass = surface_area*glue_cost;
- }
- var calculate_gst = glue + glass + labour_cost*gst;
- var total = labour_cost + glue + glass + calculate_gst;
 	     
+     var gst = 0.1;
+     var calculate_gst = glue+glass+labour_cost*gst;
+     var total = labour_cost+glue+glass+calculate_gst;
+}
 	     
  
 /* cost of glue = 10c for every cm of the LengthofEdges, 
