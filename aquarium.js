@@ -4,9 +4,9 @@ The following URL will help you to do this:
 https://www.javascript-coder.com/javascript-form/getelementbyid-form/
 */
 
-var l = document.getElementById('txtLength');
-var w = document.getElementById('txtWidth');
-var h = document.getElementById('txtHeight');
+var l = document.getElementById("txtLength");
+var w = document.getElementById("txtWidth");
+var h = document.getElementById("txtHeight");
 
 /*
 Also store the tdCost id element as a variable.
@@ -14,7 +14,7 @@ The following link will help you to do this:
 https://www.w3schools.com/jsref/met_document_getelementbyid.asp
 */
 
-var price = document.getElementById('tdCost'); 
+var price = document.getElementById("tdCost"); 
 
 
 /*
@@ -28,8 +28,8 @@ https://www.w3schools.com/js/js_htmldom_document.asp
 https://www.w3schools.com/jsref/event_onclick.asp
 */
 
-document.getElementById("btnCalcCost").onclick = CalculateCost;
-document.getElementById("btnReset").onclick = reset_cost;
+document.getElementById('btnCalcCost').onclick = TotalSurfaceArea;
+document.getElementById('btnReset').onclick = reset_cost;
 
 /*
 Create a function that calculates the surface area.
@@ -49,10 +49,11 @@ function TotalSurfaceArea () {
 	var length = l.value;
 	var width = w.value;
 	var height = h.value;
-	if (isNaN(length) || isNaN(width) || isNaN(height)) {
-		alert("Invalid entry. Please enter a number!")
-	} else {
-		return (2*(height*length))+(2*(width*length))+(2*(width*height));
+if (isNaN(l) || isNaN(w) || isNaN(h)) {
+    alert("Invalid entry. Please enter a number!")
+} else {
+	return (2*(h*l))+(2*(w*l))+(2*(w*h));
+}
 }
 /*
 Create a function that calculates the length of the edges
@@ -73,8 +74,6 @@ function LengthofEdges() {
 }	
 
 
-var LengthofEdges = LengthofEdges();
-
 /*
 create a function that stores the results of the previous functions
 as variables. Use a conditional statement to determine the thickness
@@ -89,20 +88,29 @@ You can use the URL below to help you do this:
 https://www.w3schools.com/jsref/jsref_tofixed.asp
 */
  
- 
- function CalculateCost() {
+ function PreviousFunctions () {
+	var length = l.value;
+	var width = w.value;
+	var height = h.value;
+     var TotalSurfaceArea = TotalSurfaceArea();
+     var LengthofEdges = LengthofEdges();
+ }
+ function CalculateCost () {
 	 var glue_cost = 0.10;
 	 var labour_cost = 60/6000;
-	 var glass;
-	 if (h < 26) {
-		glass = 0.6;
-	 } else {
-	 glass = 0.10;
+	 var glass_cost;
+	 if (height < 26) {
+		 glass_cost = 0.6;
 	 } 
-	 var glue = glue_cost * edges;
-	 var GST = 0.1; 
- } 
-
+	 else {
+		 glass_cost = 0.10;
+	 }
+	 var glue = glue_cost*edges;
+	 var glass = surface_area*glue_cost;
+ }
+ var calculate_gst = glue + glass + labour_cost*gst;
+ var total = labour_cost + glue + glass + calculate_gst;
+	     
  
 /* cost of glue = 10c for every cm of the LengthofEdges, 
 
@@ -114,8 +122,8 @@ Also reset the output (tdCost). Use this link to help you do this
 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_innerhtml_delete
 */
 function reset_cost() {
-	l.value = "";
-	w.value = "";
-	h.value = "";
-	tdCost = "";
+    l.value = ' ';
+    w.value = ' ';
+    h.value = ' ';
+	price.innerHTML = ' ';
 }
